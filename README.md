@@ -1,27 +1,38 @@
-# React + TypeScript + Vite
+# Kasa
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/97189792-fa04-4f71-b589-355caa878c0d/deploy-status)](https://app.netlify.com/sites/phenomenal-sherbet-fd1804/deploys)
 
-Currently, two official plugins are available:
+Kasa, une entreprise spécialisée dans la location d'appartements entre particuliers en France depuis près de 10 ans, lance une refonte majeure de son site web. Avec plus de 500 annonces postées chaque jour Kasa fait partie des leaders de la location d’appartements entre particuliers en France. Leur objectif est de migrer d'ASP.NET vers une nouvelle stack JavaScript, avec NodeJS pour le Back-end et React pour le Front-end. Ce projet ambitieux inclut également la création de nouvelles maquettes.
 
--   [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
--   [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Run Locally
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Clone the project
 
--   Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+  git clone https://github.com/MisterFried/Kasa
 ```
 
--   Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
--   Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
--   Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Go to the project directory
+
+```bash
+  cd Kasa
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+
+## Authors
+
+- [@MisterFried](https://www.github.com/MisterFried)
+
