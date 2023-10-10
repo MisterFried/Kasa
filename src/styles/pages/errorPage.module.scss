@@ -14,3 +14,14 @@
 
 	text-align: center;
 }
+
+@media screen and (width >= 38rem) {
+	.error_name {
+		font-size: 15rem;
+	}
+
+	.error_message {
+		max-width: 100%;
+		font-size: 2rem;
+	}
+}
