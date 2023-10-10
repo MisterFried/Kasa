@@ -1,0 +1,50 @@
+@use "../global/mixins.scss" as m;
+
+.header {
+	@include m.flexbox(row, 0, nowrap, space-between, center);
+
+	padding: 1.25rem;
+}
+
+.list {
+	@include m.flexbox(row, 1.5rem);
+}
+
+.footer {
+	@include m.flexbox(column, 0.5rem, nowrap, center, center);
+
+	height: 13rem;
+
+	background-color: black;
+	color: white;
+}
+
+.credits {
+	width: 10rem;
+
+	text-align: center;
+}
+
+@media screen and (width >= 38rem) {
+	.header {
+		padding: 3.5rem;
+	}
+
+	.image {
+		height: 4rem;
+	}
+
+	.footer {
+		gap: 1.5rem;
+	}
+
+	.credits {
+		width: auto;
+
+		font-size: 1.5rem;
+	}
+
+	.navLink {
+		font-size: 1.5rem;
+	}
+}

@@ -4,7 +4,6 @@
 
 Kasa, une entreprise spécialisée dans la location d'appartements entre particuliers en France depuis près de 10 ans, lance une refonte majeure de son site web. Avec plus de 500 annonces postées chaque jour Kasa fait partie des leaders de la location d’appartements entre particuliers en France. Leur objectif est de migrer d'ASP.NET vers une nouvelle stack JavaScript, avec NodeJS pour le Back-end et React pour le Front-end. Ce projet ambitieux inclut également la création de nouvelles maquettes.
 
-
 ## Run Locally
 
 Clone the project
@@ -31,8 +30,6 @@ Start the server
   npm run start
 ```
 
-
 ## Authors
 
-- [@MisterFried](https://www.github.com/MisterFried)
-
+-   [@MisterFried](https://www.github.com/MisterFried)

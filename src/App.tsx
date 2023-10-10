@@ -1,31 +1,42 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/home";
+import ErrorPage from "./pages/error-page";
 
-function App() {
-	const [count, setCount] = useState(0);
+// Global Styles
+import "./styles/styles.scss";
+// Module / local styles for the rootLayout element
+import styles from "./styles/pages/rootLayout.module.scss";
 
+export default function App() {
 	return (
 		<>
-			<div>
-				<a href="https://vitejs.dev" target="_blank">
-					<img src={viteLogo} className="logo" alt="Vite logo" />
-				</a>
-				<a href="https://react.dev" target="_blank">
-					<img src={reactLogo} className="logo react" alt="React logo" />
-				</a>
-			</div>
-			<h1>Vite + React</h1>
-			<div className="card">
-				<button onClick={() => setCount(count => count + 1)}>count is {count}</button>
-				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR
-				</p>
-			</div>
-			<p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+			<header className={styles.header}>
+				<img className={styles.image} src="../../icons/Kasa-mobile.svg"></img>
+				<nav>
+					<ul className={styles.list}>
+						<li>
+							<Link className={styles.navLink} to={"/"}>
+								Accueil
+							</Link>
+						</li>
+						<li>
+							<Link className={styles.navLink} to={"/About"}>
+								A Propos
+							</Link>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="*" element={<ErrorPage />} />
+			</Routes>
+
+			<footer className={styles.footer}>
+				<img src="../../icons/Kasa-footer.svg"></img>
+				<span className={styles.credits}>© 2020 Kasa. All rights reserved</span>
+			</footer>
 		</>
 	);
 }
-
-export default App;

@@ -1,0 +1,70 @@
+@use "../global/mixins.scss" as m;
+
+.container {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto;
+	gap: 1rem;
+
+	width: min(77.5rem, 100%);
+	padding: 1.25rem;
+	margin-inline: auto;
+
+	container-type: inline-size;
+}
+
+.heading {
+	@include m.flexbox(row, 0, nowrap, normal, center);
+
+	height: 7rem;
+	padding-inline: 1rem;
+	border-radius: 0.7rem;
+
+	color: white;
+	background-image: url("/images/Home.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.header {
+	@include m.flexbox(column, 0);
+
+	font-weight: 500;
+}
+
+.hosting_List {
+	display: grid;
+	grid-template-columns: auto;
+	justify-items: center;
+	gap: 1rem;
+}
+
+@container (width >= 42rem) {
+	.heading {
+		height: 14rem;
+	}
+
+	.header {
+		flex-direction: row;
+		gap: 1rem;
+		justify-content: center;
+
+		width: 100%;
+
+		font-size: 3rem;
+		font-weight: 500;
+	}
+
+	.hosting_List {
+		grid-template-columns: repeat(auto-fit, 21rem);
+		justify-content: center;
+		gap: 3rem;
+
+		padding: 3rem;
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+
+		background-color: #f6f6f6;
+	}
+}
