@@ -17,3 +17,8 @@ export interface HostingInterface {
 export interface HostingPropsInterface {
 	hosting: HostingInterface;
 }
+
+export interface DropdownPropsInterface {
+	title: string;
+	content: string;
+}

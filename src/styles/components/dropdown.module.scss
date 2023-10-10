@@ -1,0 +1,69 @@
+@use "../global/mixins.scss" as m;
+
+.dropdown {
+	container-type: inline-size;
+	position: relative;
+
+	width: min(63rem, 100%);
+
+	&__title {
+		position: relative;
+		z-index: 1;
+
+		width: 100%;
+		padding: 0.5rem;
+		border: none;
+		border-radius: 0.5rem;
+
+		background-color: var(--main-color);
+		font-family: var(--ff-main);
+		font-size: 1rem;
+		text-align: left;
+		color: white;
+	}
+
+	&__icon {
+		position: absolute;
+		inset: 50% 0.5rem auto auto;
+
+		translate: 0 -50%;
+		transition: all 0.2s ease-in-out;
+	}
+
+	&__content {
+		display: none;
+		z-index: 0;
+
+		padding: 1.25rem;
+		border-radius: 0 0 0.5rem 0.5rem;
+
+		background-color: #f6f6f6;
+
+		transform: translate(0, -0.5rem);
+	}
+}
+
+.opened + .dropdown__content {
+	display: block;
+}
+
+.opened > .dropdown__icon {
+	rotate: 180deg;
+}
+
+@container (width >= 42rem) {
+	.dropdown__title {
+		padding: 1rem;
+
+		font-size: 1.5rem;
+	}
+
+	.dropdown__icon {
+		right: 1.25rem;
+		scale: 2;
+	}
+
+	.dropdown__content {
+		font-size: 1.25rem;
+	}
+}

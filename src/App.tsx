@@ -6,6 +6,7 @@ import ErrorPage from "./pages/error-page";
 import "./styles/styles.scss";
 // Module / local styles for the rootLayout element
 import styles from "./styles/pages/rootLayout.module.scss";
+import About from "./pages/about";
 
 export default function App() {
 	return (
@@ -30,6 +31,7 @@ export default function App() {
 
 			<Routes>
 				<Route path="/" element={<Home />} />
+				<Route path="/About" element={<About />} />
 				<Route path="*" element={<ErrorPage />} />
 			</Routes>
 

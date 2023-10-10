@@ -5,6 +5,7 @@
 	grid-template-columns: auto;
 	grid-template-rows: auto auto;
 	gap: 1rem;
+	flex-grow: 1;
 
 	width: min(77.5rem, 100%);
 	padding: 1.25rem;

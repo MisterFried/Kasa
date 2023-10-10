@@ -1,0 +1,26 @@
+@use "../global/mixins.scss" as m;
+
+.about {
+	@include m.flexbox(column, 1rem, nowrap, start, center);
+
+	flex-grow: 1;
+	padding: 1.5rem;
+}
+
+.image {
+	width: min(100%, 77.5rem);
+	height: 7rem;
+
+	border-radius: 0.7rem;
+}
+
+.container {
+	@include m.flexbox(column, 1.25rem);
+	width: min(100%, 64rem);
+}
+
+@media screen and (width >= 38rem) {
+	.image {
+		height: 14rem;
+	}
+}
