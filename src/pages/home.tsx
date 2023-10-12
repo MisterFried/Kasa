@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
-import Hosting from "../components/hosting";
+import HostingCard from "../components/hostingCard";
 import { HostingInterface } from "../types/interfaces";
 import styles from "../styles/pages/home.module.scss";
 
 //Homepage
 export default function Home() {
 	// State of the hosting list to refresh the content once the list is updated
-	const [hostingList, setList] = useState<Array<HostingInterface>>([]);
+	const [hostingList, setHostingList] = useState<Array<HostingInterface>>([]);
 
 	// useEffect triggers only once the component is rendered
-	// Fetch the data and then update the hostingList state
+	// Fetch the data and then update the hostingList state to trigger a rerender
 	useEffect(() => {
 		const fetchHostingData = async () => {
 			const response = await fetch("/data/logements.json");
 			const responseJSON = await response.json();
-			setList(responseJSON);
+			setHostingList(responseJSON);
 		};
 
 		fetchHostingData();
@@ -31,7 +31,7 @@ export default function Home() {
 
 			<div className={styles.hosting_List}>
 				{hostingList.map(hosting => (
-					<Hosting key={hosting.id} hosting={hosting} />
+					<HostingCard key={crypto.randomUUID()} hosting={hosting} />
 				))}
 			</div>
 		</section>

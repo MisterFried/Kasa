@@ -4,6 +4,11 @@
 	@include m.flexbox(row, 0, nowrap, space-between, center);
 
 	padding: 1.25rem;
+
+	&__image {
+		width: 9rem;
+		height: 2.8rem;
+	}
 }
 
 .list {
@@ -17,6 +22,11 @@
 
 	background-color: black;
 	color: white;
+
+	&__image {
+		width: 7.5rem;
+		height: 2.5rem;
+	}
 }
 
 .credits {
@@ -28,6 +38,11 @@
 @media screen and (width >= 38rem) {
 	.header {
 		padding: 3.5rem;
+
+		&__image {
+			width: 13rem;
+			height: 4.25rem;
+		}
 	}
 
 	.image {

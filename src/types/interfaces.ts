@@ -8,7 +8,7 @@ export interface HostingInterface {
 		name: string;
 		picture: string;
 	};
-	rating: number;
+	rating: string;
 	location: string;
 	equipments: Array<string>;
 	tags: Array<string>;
@@ -20,5 +20,5 @@ export interface HostingPropsInterface {
 
 export interface DropdownPropsInterface {
 	title: string;
-	content: string;
+	content: string | Array<string>;
 }

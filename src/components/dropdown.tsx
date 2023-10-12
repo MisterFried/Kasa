@@ -4,7 +4,21 @@ import { useState } from "react";
 
 export default function Dropdown(props: DropdownPropsInterface) {
 	const title = props.title;
-	const content = props.content;
+	let content;
+
+	// Two cases : content is a string --> return a string
+	// content is an array of item --> return a <ul> with each item as an <li>
+	if (typeof props.content === "string") {
+		content = props.content;
+	} else {
+		content = (
+			<ul>
+				{props.content.map(element => (
+					<li key={crypto.randomUUID()}>{element}</li>
+				))}
+			</ul>
+		);
+	}
 
 	// Used to manage the open / close state of the dropdown
 	const [isToggled, setIsToggled] = useState(false);
