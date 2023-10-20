@@ -8,11 +8,6 @@
 	padding: 1.25rem;
 }
 
-.image {
-	height: 15rem;
-	width: 100%;
-}
-
 .content {
 	display: grid;
 	grid-template-areas:
@@ -50,9 +45,13 @@
 }
 
 .ratings {
-	@include m.flexbox(row, 0.25rem);
+	@include m.flexbox(row);
 	grid-area: rating;
 	align-items: center;
+
+	> * {
+		transform: scale(0.8);
+	}
 }
 
 .profil {
@@ -61,6 +60,7 @@
 
 	&__name {
 		font-weight: 500;
+		text-align: right;
 	}
 
 	&__picture {
@@ -82,10 +82,6 @@
 			"tags rating";
 
 		padding: 2rem 0 1.5rem;
-	}
-
-	.image {
-		height: 25rem;
 	}
 
 	.title {
@@ -114,6 +110,10 @@
 	.ratings {
 		justify-content: end;
 		gap: 1rem;
+
+		> * {
+			transform: scale(1.2);
+		}
 	}
 
 	.dropdown_container {

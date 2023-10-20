@@ -22,3 +22,7 @@ export interface DropdownPropsInterface {
 	title: string;
 	content: string | Array<string>;
 }
+
+export interface SlideshowPropsInterface {
+	images: Array<string>;
+}

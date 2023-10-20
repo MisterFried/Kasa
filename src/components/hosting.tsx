@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import styles from "../styles/components/hosting.module.scss";
 import { HostingInterface } from "../types/interfaces";
 import Dropdown from "./dropdown";
+import Slideshow from "./slideshow";
 
 export default function Hosting() {
 	// Retrieve the ID in the URL
@@ -40,11 +41,7 @@ export default function Hosting() {
 
 		return (
 			<section className={styles.hosting}>
-				<img
-					className={styles.image}
-					src={hostingData.cover}
-					alt={`Illustration du logement ${hostingData.title}`}
-				/>
+				<Slideshow images={hostingData.pictures} />
 				<div className={styles.content}>
 					<h2 className={styles.title}>{hostingData.title}</h2>
 					<h3 className={styles.location}>{hostingData.location}</h3>

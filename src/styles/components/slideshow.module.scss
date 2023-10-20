@@ -1,0 +1,60 @@
+.container {
+	position: relative;
+
+	container-type: inline-size;
+}
+
+.image {
+	height: 15rem;
+	width: 100%;
+}
+
+.previous__button,
+.next__button {
+	position: absolute;
+	top: 50%;
+
+	border: none;
+
+	background: none;
+
+	translate: -50% 0;
+	cursor: pointer;
+
+	> * {
+		scale: 1.25;
+	}
+}
+
+.previous__button {
+	left: 2rem;
+
+	rotate: -90deg;
+}
+
+.next__button {
+	right: 1rem;
+
+	rotate: 90deg;
+}
+
+.indicator {
+	position: absolute;
+	inset: auto auto 1rem 50%;
+
+	font-size: 1.25rem;
+	color: white;
+
+	translate: -50% 0;
+}
+
+@container (width >= 42rem) {
+	.image {
+		height: 26rem;
+	}
+
+	.next__button,
+	.previous__button {
+		scale: 2.5;
+	}
+}
