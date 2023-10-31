@@ -2,8 +2,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import styles from "../styles/components/hosting.module.scss";
 import { HostingInterface } from "../types/interfaces";
-import Dropdown from "./dropdown";
-import Slideshow from "./slideshow";
+import Dropdown from "../components/dropdown";
+import Slideshow from "../components/slideshow";
 
 export default function Hosting() {
 	// Retrieve the ID in the URL

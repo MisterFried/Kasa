@@ -31,7 +31,7 @@ export default function Home() {
 
 			<div className={styles.hosting_List}>
 				{hostingList.map(hosting => (
-					<HostingCard key={crypto.randomUUID()} hosting={hosting} />
+					<HostingCard key={hosting.id} hosting={hosting} />
 				))}
 			</div>
 		</section>

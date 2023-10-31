@@ -15,7 +15,7 @@ export default function Hosting(props: HostingPropsInterface) {
 				alt={`Photo de couverture du logement :${hosting.title}`}
 			/>
 			<div className={styles.gradient}></div>
-			<Link to={`/Hosting/${hosting.id}`}>
+			<Link to={`/hosting/${hosting.id}`}>
 				<h2 className={styles.title}>{hosting.title}</h2>
 			</Link>
 		</article>
