@@ -34,7 +34,7 @@
 	font-weight: 500;
 }
 
-.hosting_List {
+.hostingList {
 	display: grid;
 	grid-template-columns: auto;
 	justify-items: center;
@@ -57,7 +57,7 @@
 		font-weight: 500;
 	}
 
-	.hosting_List {
+	.hostingList {
 		grid-template-columns: repeat(auto-fit, 21rem);
 		justify-content: center;
 		gap: 3rem;

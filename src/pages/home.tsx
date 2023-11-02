@@ -29,7 +29,7 @@ export default function Home() {
 				</h1>
 			</div>
 
-			<div className={styles.hosting_List}>
+			<div className={styles.hostingList}>
 				{hostingList.map(hosting => (
 					<HostingCard key={hosting.id} hosting={hosting} />
 				))}

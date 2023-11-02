@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import styles from "../styles/components/hosting.module.scss";
+import styles from "../styles/pages/hosting.module.scss";
 import { HostingInterface } from "../types/interfaces";
 import Dropdown from "../components/dropdown";
 import Slideshow from "../components/slideshow";
@@ -45,7 +45,7 @@ export default function Hosting() {
 				<div className={styles.content}>
 					<h2 className={styles.title}>{hostingData.title}</h2>
 					<h3 className={styles.location}>{hostingData.location}</h3>
-					<div className={styles.tag_container}>
+					<div className={styles.tagContainer}>
 						{hostingData.tags.map(tag => (
 							<span className={styles.tag} key={crypto.randomUUID()}>
 								{tag}
@@ -93,7 +93,7 @@ export default function Hosting() {
 						/>
 					</div>
 				</div>
-				<div className={styles.dropdown_container}>
+				<div className={styles.dropdownContainer}>
 					<Dropdown title="Description" content={hostingData.description}></Dropdown>
 					<Dropdown title="Équipements" content={hostingData.equipments}></Dropdown>
 				</div>

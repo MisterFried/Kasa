@@ -1,29 +1,31 @@
 @use "../global/mixins.scss" as m;
 
-.container {
+.error {
 	@include m.flexbox(column, 7rem, nowrap, center, center);
 	flex-grow: 1;
 
 	padding: 7rem 0;
-}
 
-.error_name {
-	font-size: 6rem;
-}
+	&__name {
+		font-size: 6rem;
+	}
 
-.error_message {
-	max-width: 15rem;
+	&__message {
+		max-width: 15rem;
 
-	text-align: center;
+		text-align: center;
+	}
 }
 
 @media screen and (width >= 38rem) {
-	.error_name {
-		font-size: 15rem;
-	}
+	.error {
+		&__name {
+			font-size: 15rem;
+		}
 
-	.error_message {
-		max-width: 100%;
-		font-size: 2rem;
+		&__message {
+			max-width: 100%;
+			font-size: 2rem;
+		}
 	}
 }

@@ -30,7 +30,7 @@
 	font-weight: 500;
 }
 
-.tag_container {
+.tagContainer {
 	@include m.flexbox(row, 1rem, wrap);
 	grid-area: tags;
 }
@@ -70,7 +70,7 @@
 	}
 }
 
-.dropdown_container {
+.dropdownContainer {
 	@include m.flexbox(row, 2rem, wrap);
 }
 
@@ -116,7 +116,7 @@
 		}
 	}
 
-	.dropdown_container {
+	.dropdownContainer {
 		flex-wrap: nowrap;
 	}
 }

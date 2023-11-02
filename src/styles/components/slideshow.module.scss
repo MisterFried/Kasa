@@ -9,8 +9,8 @@
 	width: 100%;
 }
 
-.previous__button,
-.next__button {
+.previousButton,
+.nextButton {
 	position: absolute;
 	top: 50%;
 
@@ -26,13 +26,13 @@
 	}
 }
 
-.previous__button {
+.previousButton {
 	left: 2rem;
 
 	rotate: -90deg;
 }
 
-.next__button {
+.nextButton {
 	right: 1rem;
 
 	rotate: 90deg;
@@ -48,13 +48,17 @@
 	translate: -50% 0;
 }
 
+.hidden {
+	display: none;
+}
+
 @container (width >= 42rem) {
 	.image {
 		height: 26rem;
 	}
 
-	.next__button,
-	.previous__button {
+	.nextButton,
+	.previousButton {
 		scale: 2.5;
 	}
 }
