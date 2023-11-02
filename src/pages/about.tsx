@@ -1,6 +1,6 @@
 import Dropdown from "../components/dropdown";
 import styles from "../styles/pages/about.module.scss";
-import about from "../../public/data/about.json";
+import about from "../../src/data/about.json";
 
 export default function About() {
 	return (
